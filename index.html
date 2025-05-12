@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meus Projetos</title>
+</head>
+<body>
+  <h1>Selecione um projeto</h1>
+  <select id="projetos">
+    <option value="" disabled selected>-- Escolha um projeto --</option>
+    <option value="project1/projeto1.html">Projeto 1</option>
+    <option value="project2/projeto2.html">Projeto 2</option>
+    <option value="project3/projeto3.html">Projeto 3</option>
+  </select>
+  <button onclick="irParaProjeto()">OK</button>
+
+  <script>
+    function irParaProjeto() {
+      const selecionado = document.getElementById("projetos").value;
+      if (selecionado) {
+        window.location.href = selecionado;
+      } else {
+        alert("Por favor, selecione um projeto.");
+      }
+    }
+  </script>
+</body>
+</html>
